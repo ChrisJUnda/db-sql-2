@@ -16,5 +16,17 @@ FROM
 GROUP BY anno;
 
 2. "Contare gli insegnanti che hanno l'ufficio nello stesso edificio"
+
+SELECT
+    `office_address` AS edificio,
+    COUNT(`id`) AS totale_insegnanti
+FROM
+    `teachers`
+GROUP BY
+    edificio
+ORDER BY
+    edificio
+
+    
 3. "Calcolare la media dei voti di ogni appello d'esame"
 4. "Contare quanti corsi di laurea ci sono per ogni dipartimento"
